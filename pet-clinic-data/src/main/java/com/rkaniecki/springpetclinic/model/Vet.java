@@ -1,6 +1,8 @@
 package com.rkaniecki.springpetclinic.model;
 
-public class Vet extends Person {
+import javax.persistence.Entity;
 
+@Entity
+public class Vet extends Person {
 
 }

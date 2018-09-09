@@ -1,7 +1,9 @@
 package com.rkaniecki.springpetclinic.model;
 
+import javax.persistence.Entity;
 import java.time.LocalDate;
 
+@Entity
 public class Pet extends BaseEntity {
 
     private PetType petType;

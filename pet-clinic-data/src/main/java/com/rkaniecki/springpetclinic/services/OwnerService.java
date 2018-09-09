@@ -2,7 +2,8 @@ package com.rkaniecki.springpetclinic.services;
 
 import com.rkaniecki.springpetclinic.model.Owner;
 
-public interface OwnerService extends CrudService<Owner, Long> {
+public interface OwnerService {
 
-    Owner findByLastName(String lastName);
+    void save(Owner owner);
+
 }
