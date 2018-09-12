@@ -1,5 +1,15 @@
 /home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/model/Vet.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/services/OwnerServiceImpl.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/services/OwnerService.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/model/BaseEntity.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/services/PetServiceImpl.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/services/VetService.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/repositories/PetRepository.java
 /home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/model/Pet.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/repositories/VetRepository.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/services/VetServiceImpl.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/repositories/OwnerRepository.java
+/home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/services/PetService.java
 /home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/model/Person.java
 /home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/model/PetType.java
 /home/radek/IdeaProjects/spring-pet-clinic/pet-clinic-data/src/main/java/com/rkaniecki/springpetclinic/model/Owner.java
