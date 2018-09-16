@@ -87,9 +87,9 @@ public class DataLoader implements CommandLineRunner {
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
-        owner.setAddress("123 Baker Street");
-        owner.setCity("Miami");
-        owner.setTelephone("111222888");
+        owner2.setAddress("123 Baker Street");
+        owner2.setCity("Miami");
+        owner2.setTelephone("111222888");
 
         Pet fionasPet = new Pet();
         fionasPet.setName("Pixie");
@@ -117,7 +117,7 @@ public class DataLoader implements CommandLineRunner {
         Vet vet2 = new Vet();
         vet2.setFirstName("Jessie");
         vet2.setLastName("Porter");
-        vet.getSpecialities().add(surgery);
+        vet2.getSpecialities().add(surgery);
         vetService.save(vet2);
     }
 }
