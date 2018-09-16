@@ -2,12 +2,20 @@ package com.rkaniecki.springpetclinic.services;
 
 import com.rkaniecki.springpetclinic.model.Owner;
 
-import java.util.List;
+import java.util.Set;
 
 public interface OwnerService {
 
-    void save(Owner owner);
+    Owner save(Owner owner);
 
-    List<Owner> findAll();
+    void delete(Owner owner);
+
+    void deleteById(Long id);
+
+    Set<Owner> findAll();
+
+    Owner findByLastName(String lastName);
+
+    Owner findById(Long id);
 
 }

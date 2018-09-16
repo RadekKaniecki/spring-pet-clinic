@@ -4,8 +4,8 @@ import com.rkaniecki.springpetclinic.model.Owner;
 import com.rkaniecki.springpetclinic.repositories.OwnerRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class OwnerServiceImpl implements OwnerService {
@@ -17,15 +17,35 @@ public class OwnerServiceImpl implements OwnerService {
     }
 
     @Override
-    public void save(Owner owner) {
-        ownerRepository.save(owner);
+    public Owner save(Owner owner) {
+        return ownerRepository.save(owner);
     }
 
     @Override
-    public List<Owner> findAll() {
-        List<Owner> owners = new ArrayList<>();
-        ownerRepository.findAll().iterator().forEachRemaining(owners::add);
+    public void delete(Owner owner) {
+        ownerRepository.delete(owner);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        ownerRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<Owner> findAll() {
+        Set<Owner> owners = new HashSet<>();
+        ownerRepository.findAll().forEach(owners::add);
 
         return owners;
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return ownerRepository.findByLastName(lastName);
+    }
+
+    @Override
+    public Owner findById(Long id) {
+        return ownerRepository.findById(id).orElse(null);
     }
 }
