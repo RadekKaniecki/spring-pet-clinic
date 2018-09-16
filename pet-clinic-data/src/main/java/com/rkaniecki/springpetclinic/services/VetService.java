@@ -2,12 +2,19 @@ package com.rkaniecki.springpetclinic.services;
 
 import com.rkaniecki.springpetclinic.model.Vet;
 
-import java.util.List;
+import java.util.Set;
 
 public interface VetService {
 
-    void save(Vet vet);
+    Vet save(Vet vet);
 
-    List<Vet> findAll();
+    void delete(Vet vet);
 
+    void deleteById(Long id);
+
+    Set<Vet> findAll();
+
+    Vet findByLastName(String lastName);
+
+    Vet findById(Long id);
 }

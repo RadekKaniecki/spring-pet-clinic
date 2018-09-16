@@ -4,8 +4,8 @@ import com.rkaniecki.springpetclinic.model.Vet;
 import com.rkaniecki.springpetclinic.repositories.VetRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class VetServiceImpl implements VetService {
@@ -17,15 +17,35 @@ public class VetServiceImpl implements VetService {
     }
 
     @Override
-    public void save(Vet vet) {
-        vetRepository.save(vet);
+    public Vet save(Vet vet) {
+        return vetRepository.save(vet);
     }
 
     @Override
-    public List<Vet> findAll() {
-        List<Vet> vets = new ArrayList<>();
-        vetRepository.findAll().iterator().forEachRemaining(vets::add);
+    public void delete(Vet vet) {
+        vetRepository.delete(vet);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        vetRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<Vet> findAll() {
+        Set<Vet> vets = new HashSet<>();
+        vetRepository.findAll().forEach(vets::add);
 
         return vets;
+    }
+
+    @Override
+    public Vet findByLastName(String lastName) {
+        return vetRepository.findByLastName(lastName);
+    }
+
+    @Override
+    public Vet findById(Long id) {
+        return vetRepository.findById(id).orElse(null);
     }
 }
