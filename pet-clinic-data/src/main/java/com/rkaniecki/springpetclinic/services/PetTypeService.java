@@ -2,11 +2,19 @@ package com.rkaniecki.springpetclinic.services;
 
 import com.rkaniecki.springpetclinic.model.PetType;
 
-import java.util.List;
+import java.util.Set;
 
 public interface PetTypeService {
 
-    void save(PetType petType);
+    PetType save(PetType petType);
 
-    List<PetType> findAll();
+    void delete(PetType petType);
+
+    void deleteById(Long id);
+
+    Set<PetType> findAll();
+
+    PetType findByName(String name);
+
+    PetType findById(Long id);
 }

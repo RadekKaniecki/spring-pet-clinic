@@ -4,8 +4,8 @@ import com.rkaniecki.springpetclinic.model.PetType;
 import com.rkaniecki.springpetclinic.repositories.PetTypeRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class PetTypeServiceImpl implements PetTypeService {
@@ -17,15 +17,35 @@ public class PetTypeServiceImpl implements PetTypeService {
     }
 
     @Override
-    public void save(PetType petType) {
-        petTypeRepository.save(petType);
+    public PetType save(PetType petType) {
+        return petTypeRepository.save(petType);
     }
 
     @Override
-    public List<PetType> findAll() {
-        List<PetType> petTypes = new ArrayList<>();
-        petTypeRepository.findAll().iterator().forEachRemaining(petTypes::add);
+    public void delete(PetType petType) {
+        petTypeRepository.delete(petType);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        petTypeRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<PetType> findAll() {
+        Set<PetType> petTypes = new HashSet<>();
+        petTypeRepository.findAll().forEach(petTypes::add);
 
         return petTypes;
+    }
+
+    @Override
+    public PetType findByName(String name) {
+        return petTypeRepository.findByName(name).orElse(null);
+    }
+
+    @Override
+    public PetType findById(Long id) {
+        return petTypeRepository.findById(id).orElse(null);
     }
 }
