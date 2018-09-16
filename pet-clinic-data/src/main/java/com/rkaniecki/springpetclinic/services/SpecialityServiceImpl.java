@@ -4,6 +4,9 @@ import com.rkaniecki.springpetclinic.model.Speciality;
 import com.rkaniecki.springpetclinic.repositories.SpecialityRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Service
 public class SpecialityServiceImpl implements SpecialityService {
 
@@ -14,7 +17,29 @@ public class SpecialityServiceImpl implements SpecialityService {
     }
 
     @Override
-    public void save(Speciality speciality) {
-        specialityRepository.save(speciality);
+    public Speciality save(Speciality speciality) {
+        return specialityRepository.save(speciality);
+    }
+
+    @Override
+    public void delete(Speciality speciality) {
+        specialityRepository.delete(speciality);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        specialityRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<Speciality> findAll() {
+        Set<Speciality> specialities = new HashSet<>();
+        specialityRepository.findAll().forEach(specialities::add);
+        return specialities;
+    }
+
+    @Override
+    public Speciality findById(Long id) {
+        return specialityRepository.findById(id).orElse(null);
     }
 }
